@@ -21,7 +21,7 @@ async def arbic(client: Client, query: CallbackQuery):
                         url=f"https://t.me/{bot.username}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("𖥻 𝐔𝐑 , 𝐅𝐚𝐕 𝐀𝐛𝐃𝐎𝐨 -", url=f"https://t.me/EU_TM")],
+                [InlineKeyboardButton("𝗸𝗮𝗯𝗼𝗼𝘀", url=f"https://t.me/Z_C_T")],
                 [
                     InlineKeyboardButton("طريقة التشغيل .", callback_data="bcmds"),
                     InlineKeyboardButton("طريقة التفعيل.", callback_data="bhowtouse"),
@@ -67,7 +67,7 @@ Powered By [{OWNER_NAME}]""",
                     )
                 ],
                 [
-                    InlineKeyboardButton("Donate", url=f"https://t.me/EU_TM")
+                    InlineKeyboardButton("Donate", url=f"https://t.me/Z_C_T")
                 ],
                 [
                     InlineKeyboardButton("Commands", callback_data="cbcmds"),
@@ -103,7 +103,7 @@ async def cbguides(_, query: CallbackQuery):
 4.) **Turn on the video chat first before start to play video/music.**
 5.) **Sometimes, reloading the bot by using /reload command can help you to fix some problem.**
 📌 **If the userbot not joined to video chat, make sure if the video chat already turned on.**
-💡 **If you have a follow-up questions about this bot, you can tell it on my support chat here: @EU_TM**
+💡 **If you have a follow-up questions about this bot, you can tell it on my support chat here: @Z_C_T**
 ⚡ __ Developer by [{OWNER_NAME}]""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 Go Back", callback_data="english")]]
