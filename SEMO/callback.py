@@ -21,7 +21,7 @@ async def arbic(client: Client, query: CallbackQuery):
                         url=f"https://t.me/{bot.username}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("𝗸𝗮𝗯𝗼𝗼𝘀", url=f"https://t.me/Z_C_T")],
+                [InlineKeyboardButton("𖥻 𝐔𝐑 , 𝐅𝐚𝐕 𝐀𝐛𝐃𝐎𝐨 -", url=f"https://t.me/EU_TM")],
                 [
                     InlineKeyboardButton("طريقة التشغيل .", callback_data="bcmds"),
                     InlineKeyboardButton("طريقة التفعيل.", callback_data="bhowtouse"),
@@ -103,7 +103,7 @@ async def cbguides(_, query: CallbackQuery):
 4.) **Turn on the video chat first before start to play video/music.**
 5.) **Sometimes, reloading the bot by using /reload command can help you to fix some problem.**
 📌 **If the userbot not joined to video chat, make sure if the video chat already turned on.**
-💡 **If you have a follow-up questions about this bot, you can tell it on my support chat here: @Z_C_T**
+💡 **If you have a follow-up questions about this bot, you can tell it on my support chat here: @EU_TM**
 ⚡ __ Developer by [{OWNER_NAME}]""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 Go Back", callback_data="english")]]
@@ -192,7 +192,7 @@ async def cbsudo(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("bhowtouse"))
 async def acbguides(_, query: CallbackQuery):
     await query.edit_message_text(
-        f""" **طريقة تفعيل البوت في مجموعتك ⚡♥️:**
+        f""" **طريقة تفعيل البوت في مجموعتك ⚡:**
 1.) **اولا قم بإضافة البوت اللي مجموعتك ⚡.**
 2.) **قم بترقيى البوت مشرف مع الصلاحيات المطلوبة ⚡.**
 3.) ** لتحديث قائمة الادمن /Reload قم بكتابة الامر ⚡.**

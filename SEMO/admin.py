@@ -159,7 +159,7 @@ async def admin_risght(client: Client, message):
        requester = userx.mention       
        gr = await get_group(bot_username)
        ch = await get_channel(bot_username)
-       button = [[InlineKeyboardButton(text="END", callback_data=f"stop"), InlineKeyboardButton(text="RESUME", callback_data=f"resume"), InlineKeyboardButton(text="PAUSE", callback_data=f"pause")], [InlineKeyboardButton(text="𝗖𝗵𝗮𝗻𝗻𝗲𝗹 🌐", url=f"{ch}"), InlineKeyboardButton(text="𝗚𝗿𝗼𝘂𝗽 ♻️", url=f"{gr}")], [InlineKeyboardButton(text=f"{OWNER_NAME}", url="https://t.me/KK_DX")], [InlineKeyboardButton(text="اضف البوت الي مجموعتك او قناتك ⚡", url=f"https://t.me/{bot_username}?startgroup=True")]]
+       button = [[InlineKeyboardButton(text="𝐄𝐍𝐃", callback_data=f"stop"), InlineKeyboardButton(text="𝐑𝐄𝐒𝐔𝐌𝐄", callback_data=f"resume"), InlineKeyboardButton(text="𝐏𝐀𝐔𝐒𝐄", callback_data=f"pause")], [InlineKeyboardButton(text="𝐂𝐇𝐀𝐍𝐍𝐄𝐋", url=f"{ch}"), InlineKeyboardButton(text="𝐆𝐑𝐎𝐔𝐏", url=f"{gr}")], [InlineKeyboardButton(text=f"{OWNER_NAME}", url="https://t.me/KK_DX")], [InlineKeyboardButton(text="اضف البوت الي مجموعتك او قناتك ⚡", url=f"https://t.me/{bot_username}?startgroup=True")]]
        await message.reply_photo(photo=img, caption=f"**Skipped Streaming **\n\n**Song Name** : {title}\n**Duration Time** {dur}\n**Request By** : {requester}", reply_markup=InlineKeyboardMarkup(button))
        try:
            os.remove(file_path)
