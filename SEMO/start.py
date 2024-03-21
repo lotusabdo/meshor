@@ -192,7 +192,7 @@ async def welcome(client: Client, message):
          await client.set_administrator_title(chat_id, user_id, "عبدو")
       except:
         pass
-      return await message.reply_text(f"** انضم المطو عبدو للشات   \n مرحبا بك : @EU_TM  •**")
+      return await message.reply_text(f"** انضم المطو عبدو للشات   .\n مرحبا بك : @EU_TM  •**")
     dev = await get_dev(bot_username)
     if message.new_chat_members[0].id == dev:
       try:
@@ -200,7 +200,7 @@ async def welcome(client: Client, message):
          await client.set_administrator_title(message.chat.id, message.new_chat_members[0].id, "مطور البوت")
       except:
         pass
-      return await message.reply_text(f"** انضم مالك البوت للشات   .\n مرحبا بك : {message.new_chat_members[0].mention}  •**")
+      return await message.reply_text(f"**♪ انضم مالك البوت للشات   .\n مرحبا بك : {message.new_chat_members[0].mention}  •**")
     if message.new_chat_members[0].id == bot.id:
       photo = bot.photo.big_file_id
       photo = await client.download_media(photo)
@@ -280,7 +280,7 @@ async def start(client, message):
     username = client.me.username
     photo = await gen_bot(client, username, photo)
   button = [[InlineKeyboardButton(text="ᴇɴɢʟɪѕʜ 🇺🇲", callback_data=f"english"), InlineKeyboardButton(text="عربي 🇪🇬", callback_data=f"arbic")], [InlineKeyboardButton(text=f"{nn}", user_id=f"{dev}")]]
-  await client.send_photo(message.chat.id, photo=photo, caption="𝐖𝐞𝐥𝐨𝐦𝐞 𝐓𝐨 𝐒𝐨𝐮𝐫𝐜𝐞 𝐋𝐨𝐭𝐮𝐬 𝐌𝐮𝐬𝐢𝐜", reply_to_message_id=message.id, reply_markup=InlineKeyboardMarkup(button))
+  await client.send_photo(message.chat.id, photo=photo, caption="الرجاء الضغط علي اللغة اذا كانت اللغة العربية او باللغة الانجلزية\n\nᴘʟᴇᴀѕᴇ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʟᴀɴɢụᴀɢᴇ ɪғ ɪᴛ ɪѕ ᴀʀᴀʙɪᴄ ᴏʀ ᴇɴɢʟɪѕʜ", reply_to_message_id=message.id, reply_markup=InlineKeyboardMarkup(button))
   
 
 ############//((/start))//############
@@ -296,7 +296,7 @@ async def helpercn(client, message):
 ["تعطيل سجل التشغيل","تفعيل سجل التشغيل"],
 ["تعطيل الاشتراك","تفعيل الاشتراك"],
 ["رجوع للقائمة الرئيسيه"]], resize_keyboard=True)
-    await message.reply_text(f"** مرحبا بك في قسم ⟨ التفعيل والتعطيل ⟩ 🚦 .**", reply_markup=kep,quote=True)
+    await message.reply_text(f"**♪ مرحبا بك في قسم ⟨ التفعيل والتعطيل ⟩ 🚦 .**", reply_markup=kep,quote=True)
 
 @Client.on_message(filters.command(["قسم التعيين"], ""))
 async def cast(client: Client, message):
@@ -323,7 +323,7 @@ async def Zo_Mbi_e(client, message):
 ["المجموعات","المستخدمين"],
 ["تغير مكان سجل التشغيل"],
 ["رجوع للقائمة الرئيسيه"]], resize_keyboard=True)
-    await message.reply_text(f"** مرحبا بك في قسم ⟨ البوت ⟩   .**", reply_markup=kep,quote=True)
+    await message.reply_text(f"**♪ مرحبا بك في قسم ⟨ البوت ⟩   .**", reply_markup=kep,quote=True)
 
 ############//((/start))//############
 
@@ -419,7 +419,7 @@ tyet = ["اسم البست تبعك ",
 "لو حياتك كتاب اي عنوانه" , 
 "هتعمل ايه لو ابوك بيتزوج الثانيه"]
 
-@Client.on_message(filters.command("كت تويت",""))
+@Client.on_message(filters.command("حماده",""))
 async def hmada(client, message): 
   OWNER.append("Zo_Mbi_e")
 
@@ -934,8 +934,8 @@ async def alive(client: Client, message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("𝐆𝐑𝐎𝐔𝐏 ️", url=f"{gr}"),
-                InlineKeyboardButton("𝐂𝐇𝐀𝐍𝐍𝐄𝐋 ️", url=f"{ch}"),
+                InlineKeyboardButton("𝗚𝗿𝗼𝘂𝗽 ️", url=f"{gr}"),
+                InlineKeyboardButton("𝗖𝗵𝗮𝗻𝗻𝗲𝗹 ️", url=f"{ch}"),
             ],
             [
                  InlineKeyboardButton(f"{OWNER_NAME}", url=f"https://t.me/{OWNER[0]}")
@@ -1071,7 +1071,7 @@ async def dev(client: Client, message: Message):
         pass
        
 
-@Client.on_message(filters.command(["المطور"], ""))
+@Client.on_message(filters.command(["مبرمج السورس"], ""))
 async def debsu(client: Client, message: Message):
      if await joinch(message):
             return
@@ -1495,7 +1495,7 @@ array = []
 @Client.on_message(filters.command(["@all", "تاك","all"], "") & ~filters.private)
 async def nummmm(client: app, message):
   if message.chat.id in array:
-     return await message.reply_text("** التاك قيد التشغيل الان  **")
+     return await message.reply_text("**♪ التاك قيد التشغيل الان  **")
   chek = await client.get_chat_member(message.chat.id, message.from_user.id)
   if not chek.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR]:
     await message.reply("** عذرا عزيزي هذا الامر للادمن الجروب فقط  **")

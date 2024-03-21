@@ -248,7 +248,7 @@ async def play(client: Client, message):
   message_id = message.id 
   gr = await get_group(bot_username)
   ch = await get_channel(bot_username)
-  button = [[InlineKeyboardButton(text="𝐄𝐍𝐃", callback_data=f"stop"), InlineKeyboardButton(text="𝐑𝐄𝐒𝐔𝐌𝐄", callback_data=f"resume"), InlineKeyboardButton(text="𝐏𝐀𝐔𝐒𝐄", callback_data=f"pause")], [InlineKeyboardButton(text=" 𝐂𝐇𝐀𝐍𝐍𝐄𝐋", url=f"{ch}"), InlineKeyboardButton(text="𝐆𝐑𝐎𝐔𝐏", url=f"{gr}")], [InlineKeyboardButton(text=f"{OWNER_NAME}", url="https://t.me/EU_TM")], [InlineKeyboardButton(text="اضف البوت الي مجموعتك او قناتك ⚡", url=f"https://t.me/{bot_username}?startgroup=True")]]
+  button = [[InlineKeyboardButton(text="𝐄𝐍𝐃", callback_data=f"stop"), InlineKeyboardButton(text="𝐑𝐄𝐒𝐔𝐌𝐄", callback_data=f"resume"), InlineKeyboardButton(text="𝐏𝐀𝐔𝐒𝐄 ♪.", callback_data=f"pause")], [InlineKeyboardButton(text=" 𝐂𝐇𝐀𝐍𝐍𝐄𝐋", url=f"{ch}"), InlineKeyboardButton(text="𝐆𝐑𝐎𝐔𝐏", url=f"{gr}")], [InlineKeyboardButton(text=f"{OWNER_NAME}", url="https://t.me/EU_TM")], [InlineKeyboardButton(text="اضف البوت الي مجموعتك او قناتك ⚡", url=f"https://t.me/{bot_username}?startgroup=True")]]
   if message.chat.type == ChatType.PRIVATE:
        return await message.reply_text("** لا يمكنك التشغيل هنا للأسف  .\n قم بإضافة البوت اللي مجموعتك للتشغيل  .**", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("ضف البوت الي مجموعتك او قناتك ⚡", url=f"https://t.me/{bot_username}?startgroup=True")]]))
   if message.sender_chat:
@@ -321,7 +321,7 @@ async def play(client: Client, message):
           ahmedphoto = ahmed.photo.big_file_id
           photo = await client.download_media(ahmedphoto)
          photo = await gen_thumb(videoid, photo)
-         await message.reply_photo(photo=photo, caption=f"** Add Track To Playlist : {position}  \n\n Song Name : {title[:18]} ️ \n Duration Time : {duration}  \n Request By : {requester}  **", reply_markup=InlineKeyboardMarkup(button))
+         await message.reply_photo(photo=photo, caption=f"** Add Track To Playlist : {position}  .\n\n Song Name : {title[:18]} ️ .\n Duration Time : {duration}  .\n Request By : {requester}  .**", reply_markup=InlineKeyboardMarkup(button))
          await logs(bot_username, client, message)
      else:
          chat_id = message.chat.id
@@ -357,7 +357,7 @@ async def play(client: Client, message):
           ahmedphoto = ahmed.photo.big_file_id
           photo = await client.download_media(ahmedphoto)
          photo = await gen_thumb(videoid, photo)
-         await message.reply_photo(photo=photo, caption=f"** Startling Playing Now  \n\n Song Name : {title[:18]} ️ .\n Duration Time : {duration} \n Request By : {requester}  .**", reply_markup=InlineKeyboardMarkup(button))
+         await message.reply_photo(photo=photo, caption=f"** Startling Playing Now  .\n\n Song Name : {title[:18]} ️ .\n Duration Time : {duration} .\n Request By : {requester}  .**", reply_markup=InlineKeyboardMarkup(button))
          await logs(bot_username, client, message)
      await rep.delete()
   else:
@@ -390,7 +390,7 @@ async def play(client: Client, message):
          chatname = f"[{message.chat.title}](https://t.me/{message.chat.username})" if message.chat.username else f"{message.chat.title}"
          chatname = f"{message.author_signature}" if message.author_signature else chatname
          requester = chatname if SEMO.views else f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})"
-         await message.reply_photo(photo=photo, caption=f"** Add Track To Playlist : {position}  \n\n Song Name : {title}  \n Duration Time : {duration}  \n Request By : {requester}  **", reply_markup=InlineKeyboardMarkup(button))
+         await message.reply_photo(photo=photo, caption=f"** Add Track To Playlist : {position}  .\n\n Song Name : {title}  .\n Duration Time : {duration}  .\n Request By : {requester}  .**", reply_markup=InlineKeyboardMarkup(button))
          await logs(bot_username, client, message)
        else:
          chat_id = message.chat.id
