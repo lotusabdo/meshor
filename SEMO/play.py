@@ -321,7 +321,7 @@ async def play(client: Client, message):
           ahmedphoto = ahmed.photo.big_file_id
           photo = await client.download_media(ahmedphoto)
          photo = await gen_thumb(videoid, photo)
-         await message.reply_photo(photo=photo, caption=f"** Add Track To Playlist : {position}  .\n\n Song Name : {title[:18]} ️ .\n Duration Time : {duration}  .\n Request By : {requester}  .**", reply_markup=InlineKeyboardMarkup(button))
+         await message.reply_photo(photo=photo, caption=f"** Add Track To Playlist : {position}  \n\n Song Name : {title[:18]} ️ \n Duration Time : {duration}  \n Request By : {requester}  **", reply_markup=InlineKeyboardMarkup(button))
          await logs(bot_username, client, message)
      else:
          chat_id = message.chat.id
@@ -357,7 +357,7 @@ async def play(client: Client, message):
           ahmedphoto = ahmed.photo.big_file_id
           photo = await client.download_media(ahmedphoto)
          photo = await gen_thumb(videoid, photo)
-         await message.reply_photo(photo=photo, caption=f"** Startling Playing Now  .\n\n Song Name : {title[:18]} ️ .\n Duration Time : {duration} .\n Request By : {requester}  .**", reply_markup=InlineKeyboardMarkup(button))
+         await message.reply_photo(photo=photo, caption=f"** Startling Playing Now  \n\n Song Name : {title[:18]} ️ .\n Duration Time : {duration} \n Request By : {requester}  .**", reply_markup=InlineKeyboardMarkup(button))
          await logs(bot_username, client, message)
      await rep.delete()
   else:
@@ -390,7 +390,7 @@ async def play(client: Client, message):
          chatname = f"[{message.chat.title}](https://t.me/{message.chat.username})" if message.chat.username else f"{message.chat.title}"
          chatname = f"{message.author_signature}" if message.author_signature else chatname
          requester = chatname if SEMO.views else f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})"
-         await message.reply_photo(photo=photo, caption=f"** Add Track To Playlist : {position}  .\n\n Song Name : {title}  .\n Duration Time : {duration}  .\n Request By : {requester}  .**", reply_markup=InlineKeyboardMarkup(button))
+         await message.reply_photo(photo=photo, caption=f"** Add Track To Playlist : {position}  \n\n Song Name : {title}  \n Duration Time : {duration}  \n Request By : {requester}  **", reply_markup=InlineKeyboardMarkup(button))
          await logs(bot_username, client, message)
        else:
          chat_id = message.chat.id
