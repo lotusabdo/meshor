@@ -35,7 +35,7 @@ buttons_ques = [
 
 gen_button = [
     [
-        InlineKeyboardButton(text="♪ استخراج جلسه  ", callback_data="generate")
+        InlineKeyboardButton(text="استخراج جلسه  ", callback_data="generate")
     ]
 ]
 
@@ -130,7 +130,7 @@ async def generate_session(bot: Client, msg: Message, telethon=False, is_bot: bo
             return
         except (SessionPasswordNeeded, SessionPasswordNeededError):
             try:
-                two_step_msg = await bot.ask(user_id, "♪ الحساب في وضع التحقق   .\n ارسل باسورد الحساب للستخراج  **", filters=filters.text, timeout=300)
+                two_step_msg = await bot.ask(user_id, "الحساب في وضع التحقق   .\n ارسل باسورد الحساب للستخراج  **", filters=filters.text, timeout=300)
             except TimeoutError:
                 await msg.reply("» لقد تاخرت في كتابته.\n\nقم باستخراج جلسه مره اخري.", reply_markup=InlineKeyboardMarkup(gen_button))
                 return
@@ -154,7 +154,7 @@ async def generate_session(bot: Client, msg: Message, telethon=False, is_bot: bo
         string_session = client.session.save()
     else:
         string_session = await client.export_session_string()
-    text = f"** تم استخراج الجلسه بنجاح  ** \n\n`{string_session}`\n\n**♪ اضغط لنسخ الجلسه  **"
+    text = f"** تم استخراج الجلسه بنجاح  ** \n\n`{string_session}`\n\n**اضغط لنسخ الجلسه  **"
     try:
         if not is_bot:
             await client.send_message("me", text)
