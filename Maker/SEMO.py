@@ -216,7 +216,7 @@ async def stratmaked(client, message):
     await message.reply_text(f"**👋🏻 ꒐ أهلاً بك {message.from_user.mention}   .\n🤖 ꒐ في صانع ميوزك كابوس  **", reply_markup=kep,quote=True)
     
 @app.on_message(
-    filters.command(["/alive", "معلومات", "سورس", "السورس", "• السورس •"], "")
+    filters.command(["/alive", "معلومات", "سورس", "السورس", " حول السورس"], "")
 )
 async def alive(client: Client, message):
     chat_id = message.chat.id
@@ -395,7 +395,7 @@ async def delbot(client: app, message):
      Bots.delete_one(dev)
      await message.reply_text("** تم حذف بوتك بنجاح  **")
     except:
-     await message.reply_text("**♪ حدث خطأ ، تواصل مع المطور  .\n Dev : @{OWNER[0]}  **")
+     await message.reply_text("** حدث خطأ ، تواصل مع المطور  .\n Dev : @{OWNER[0]}  **")
    
 
     
@@ -629,9 +629,9 @@ async def casttoall(client: app, message):
 @app.on_message(filters.command(["اذاعه للمطورين"], ""))
 async def cast_dev(client, message):
  if message.chat.username in OWNER:
-  ask = await client.ask(message.chat.id, "**♪ قم بارسال الاذاعه الان  **", timeout=300)
+  ask = await client.ask(message.chat.id, "**قم بارسال الاذاعه الان  **", timeout=300)
   if ask.text == "الغاء":
-      return await ask.reply_text("**♪ تم الغاء الأمر بنجاح  **")
+      return await ask.reply_text("** تم الغاء الأمر بنجاح  **")
   d = 0
   f = 0
   bots = Bots.find({})
@@ -681,7 +681,7 @@ async def checkbot(client: app, message):
    bots = Bots.find({})
    m = ask.text
    m = int(m)
-   text = f"**♪ تم ايقاف هذه البوتات لان الاحصائيات اقل من : {ask.text} مجموعة  **"
+   text = f"**تم ايقاف هذه البوتات لان الاحصائيات اقل من : {ask.text} مجموعة  **"
    b = 0
    for i in bots:
        try:
